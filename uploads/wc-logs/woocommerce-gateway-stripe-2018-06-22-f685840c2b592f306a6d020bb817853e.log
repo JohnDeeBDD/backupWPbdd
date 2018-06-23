@@ -1,0 +1,461 @@
+2018-06-22T02:04:25+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Error: Unable to verify domain - missing secret key.
+====End Log====
+
+
+2018-06-22T02:05:51+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Error: Unable to verify domain - missing secret key.
+====End Log====
+
+
+2018-06-22T02:08:29+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+sources/src_D5xA8C09ccn6WX
+====End Log====
+
+
+2018-06-22T02:08:29+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+customers request: Array
+(
+    [email] => johndeebdd@gmail.com
+    [description] => Name: James Karlinski Username: John Dee
+    [metadata] => Array
+        (
+        )
+
+)
+
+====End Log====
+
+
+2018-06-22T02:08:30+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+customers/cus_D5xAN5qT3DWBJ6/sources request: Array
+(
+    [source] => src_D5xA8C09ccn6WX
+)
+
+====End Log====
+
+
+2018-06-22T02:08:30+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+customers/cus_D5xAN5qT3DWBJ6 request: Array
+(
+    [default_source] => src_D5xA8C09ccn6WX
+)
+
+====End Log====
+
+
+2018-06-22T02:08:31+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Info: Begin processing payment for order 15744 for the amount of 50.00
+====End Log====
+
+
+2018-06-22T02:08:31+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+charges request: Array
+(
+    [currency] => usd
+    [amount] => 5000
+    [description] => Behavior Driven Development in WordPress - Order 15744
+    [statement_descriptor] => WP-BDD.com
+    [capture] => true
+    [expand[]] => balance_transaction
+    [metadata] => Array
+        (
+            [customer_name] => James Karlinski
+            [customer_email] => johndeebdd@gmail.com
+            [order_id] => 15744
+        )
+
+    [customer] => cus_D5xAN5qT3DWBJ6
+    [source] => src_D5xA8C09ccn6WX
+)
+
+====End Log====
+
+
+2018-06-22T02:08:32+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Processing response: stdClass Object
+(
+    [id] => ch_D5xAPg4btU4z4s
+    [object] => charge
+    [amount] => 5000
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_D5xA5Laxva6by7
+            [object] => balance_transaction
+            [amount] => 5000
+            [available_on] => 1529971200
+            [created] => 1529658511
+            [currency] => usd
+            [description] => Behavior Driven Development in WordPress - Order 15744
+            [exchange_rate] => 
+            [fee] => 175
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 175
+                            [application] => 
+                            [currency] => usd
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 4825
+            [source] => ch_D5xAPg4btU4z4s
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1529658511
+    [currency] => usd
+    [customer] => cus_D5xAN5qT3DWBJ6
+    [description] => Behavior Driven Development in WordPress - Order 15744
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 
+    [metadata] => stdClass Object
+        (
+            [customer_name] => James Karlinski
+            [customer_email] => johndeebdd@gmail.com
+            [order_id] => 15744
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => 
+            [seller_message] => Payment complete.
+            [type] => authorized
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_D5xAPg4btU4z4s/refunds
+        )
+
+    [review] => 
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => src_D5xA8C09ccn6WX
+            [object] => source
+            [amount] => 
+            [card] => stdClass Object
+                (
+                    [exp_month] => 2
+                    [exp_year] => 2020
+                    [address_line1_check] => pass
+                    [address_zip_check] => pass
+                    [brand] => Visa
+                    [card_automatically_updated] => 
+                    [country] => US
+                    [cvc_check] => pass
+                    [fingerprint] => ABT6xxGlRIKvMhJd
+                    [funding] => credit
+                    [last4] => 4242
+                    [three_d_secure] => optional
+                    [tokenization_method] => 
+                    [dynamic_last4] => 
+                )
+
+            [client_secret] => src_client_secret_D5xAWLiiPJ2hysy4GI2HbJO3
+            [created] => 1529658512
+            [currency] => 
+            [customer] => cus_D5xAN5qT3DWBJ6
+            [flow] => none
+            [livemode] => 
+            [metadata] => stdClass Object
+                (
+                )
+
+            [owner] => stdClass Object
+                (
+                    [address] => stdClass Object
+                        (
+                            [city] => Las Vegas
+                            [country] => US
+                            [line1] => 123 Main St
+                            [line2] => 
+                            [postal_code] => 89121
+                            [state] => NV
+                        )
+
+                    [email] => johndeebdd@gmail.com
+                    [name] => James Karlinski
+                    [phone] => 7027485491
+                    [verified_address] => 
+                    [verified_email] => 
+                    [verified_name] => 
+                    [verified_phone] => 
+                )
+
+            [statement_descriptor] => 
+            [status] => chargeable
+            [type] => card
+            [usage] => reusable
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => WP-BDD.com
+    [status] => succeeded
+    [transfer_group] => 
+)
+
+====End Log====
+
+
+2018-06-22T02:14:39+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+customers/cus_D5xAN5qT3DWBJ6/sources request: Array
+(
+    [limit] => 100
+)
+
+====End Log====
+
+
+2018-06-22T02:15:00+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+sources/src_D5xA8C09ccn6WX
+====End Log====
+
+
+2018-06-22T02:15:00+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Info: Begin processing payment for order 15746 for the amount of 123.00
+====End Log====
+
+
+2018-06-22T02:15:00+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+charges request: Array
+(
+    [currency] => usd
+    [amount] => 12300
+    [description] => Behavior Driven Development in WordPress - Order 15746
+    [statement_descriptor] => WP-BDD.com
+    [capture] => true
+    [expand[]] => balance_transaction
+    [metadata] => Array
+        (
+            [customer_name] => James Karlinski
+            [customer_email] => johndeebdd@gmail.com
+            [order_id] => 15746
+        )
+
+    [customer] => cus_D5xAN5qT3DWBJ6
+    [source] => src_D5xA8C09ccn6WX
+)
+
+====End Log====
+
+
+2018-06-22T02:15:01+00:00 DEBUG 
+====Stripe Version: 4.1.7====
+====Start Log====
+Processing response: stdClass Object
+(
+    [id] => ch_D5xGc9hMU3WP0u
+    [object] => charge
+    [amount] => 12300
+    [amount_refunded] => 0
+    [application] => 
+    [application_fee] => 
+    [balance_transaction] => stdClass Object
+        (
+            [id] => txn_D5xG5RlyeBBobK
+            [object] => balance_transaction
+            [amount] => 12300
+            [available_on] => 1529971200
+            [created] => 1529658901
+            [currency] => usd
+            [description] => Behavior Driven Development in WordPress - Order 15746
+            [exchange_rate] => 
+            [fee] => 387
+            [fee_details] => Array
+                (
+                    [0] => stdClass Object
+                        (
+                            [amount] => 387
+                            [application] => 
+                            [currency] => usd
+                            [description] => Stripe processing fees
+                            [type] => stripe_fee
+                        )
+
+                )
+
+            [net] => 11913
+            [source] => ch_D5xGc9hMU3WP0u
+            [status] => pending
+            [type] => charge
+        )
+
+    [captured] => 1
+    [created] => 1529658901
+    [currency] => usd
+    [customer] => cus_D5xAN5qT3DWBJ6
+    [description] => Behavior Driven Development in WordPress - Order 15746
+    [destination] => 
+    [dispute] => 
+    [failure_code] => 
+    [failure_message] => 
+    [fraud_details] => stdClass Object
+        (
+        )
+
+    [invoice] => 
+    [livemode] => 
+    [metadata] => stdClass Object
+        (
+            [customer_name] => James Karlinski
+            [customer_email] => johndeebdd@gmail.com
+            [order_id] => 15746
+        )
+
+    [on_behalf_of] => 
+    [order] => 
+    [outcome] => stdClass Object
+        (
+            [network_status] => approved_by_network
+            [reason] => 
+            [seller_message] => Payment complete.
+            [type] => authorized
+        )
+
+    [paid] => 1
+    [receipt_email] => 
+    [receipt_number] => 
+    [refunded] => 
+    [refunds] => stdClass Object
+        (
+            [object] => list
+            [data] => Array
+                (
+                )
+
+            [has_more] => 
+            [total_count] => 0
+            [url] => /v1/charges/ch_D5xGc9hMU3WP0u/refunds
+        )
+
+    [review] => 
+    [shipping] => 
+    [source] => stdClass Object
+        (
+            [id] => src_D5xA8C09ccn6WX
+            [object] => source
+            [amount] => 
+            [card] => stdClass Object
+                (
+                    [exp_month] => 2
+                    [exp_year] => 2020
+                    [address_line1_check] => pass
+                    [address_zip_check] => pass
+                    [brand] => Visa
+                    [card_automatically_updated] => 
+                    [country] => US
+                    [cvc_check] => pass
+                    [fingerprint] => ABT6xxGlRIKvMhJd
+                    [funding] => credit
+                    [last4] => 4242
+                    [three_d_secure] => optional
+                    [tokenization_method] => 
+                    [dynamic_last4] => 
+                )
+
+            [client_secret] => src_client_secret_D5xAWLiiPJ2hysy4GI2HbJO3
+            [created] => 1529658901
+            [currency] => 
+            [customer] => cus_D5xAN5qT3DWBJ6
+            [flow] => none
+            [livemode] => 
+            [metadata] => stdClass Object
+                (
+                )
+
+            [owner] => stdClass Object
+                (
+                    [address] => stdClass Object
+                        (
+                            [city] => Las Vegas
+                            [country] => US
+                            [line1] => 123 Main St
+                            [line2] => 
+                            [postal_code] => 89121
+                            [state] => NV
+                        )
+
+                    [email] => johndeebdd@gmail.com
+                    [name] => James Karlinski
+                    [phone] => 7027485491
+                    [verified_address] => 
+                    [verified_email] => 
+                    [verified_name] => 
+                    [verified_phone] => 
+                )
+
+            [statement_descriptor] => 
+            [status] => chargeable
+            [type] => card
+            [usage] => reusable
+        )
+
+    [source_transfer] => 
+    [statement_descriptor] => WP-BDD.com
+    [status] => succeeded
+    [transfer_group] => 
+)
+
+====End Log====
+
+
